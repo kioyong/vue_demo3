@@ -23,6 +23,18 @@ export default {
         },
         {
           id: '2',
+          name: 'Itadmin'
+        },
+        {
+          id: '3',
+          name: 'Analytics'
+        },
+        {
+          id: '4',
+          name: 'Export'
+        },
+        {
+          id: '5',
           name: 'Reports'
         }
       ]
