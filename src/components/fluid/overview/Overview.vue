@@ -1,10 +1,10 @@
 <template>
   <div>
-    <dashboard :class="{'active': overviewModular.dashboard}"></dashboard>
-    <newjoiner :title="newjoinerTitle" :employees="employees" :class="{'active': overviewModular.newjoiner}"></newjoiner>
+    <!-- <dashboard :class="{'active': overviewModular.dashboard}"></dashboard>
+    <newjoiner :title="newjoinerTitle" :employees="employees" :class="{'active': overviewModular.newjoiner}"></newjoiner> -->
     <!-- TODO 由ItAdmin 控制展示哪一些fluid -->
-    <!-- <dashboard></dashboard> -->
-    <!-- <newjoiner :title="newjoinerTitle" :employees="employees"></newjoiner> -->
+    <dashboard></dashboard>
+    <newjoiner :title="newjoinerTitle" :employees="employees"></newjoiner>
   </div>
 </template>
 

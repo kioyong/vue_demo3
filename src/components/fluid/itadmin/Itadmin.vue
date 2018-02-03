@@ -3,13 +3,17 @@
   <div>
     <h1 class="page-header">Itadmin</h1>
     <div class="sub-header row">
-      <div class="col-xs-3">
+      <div class="col-xs-2 ">
         <form>
           <input type="text" class="form-control" placeholder="Search...">
         </form>
       </div>
-      <button type="button" class="btn btn-primary">Search</button>
-      <button type="button" class="btn btn-primary ">Refresh</button>
+      <div class="col-xs-1">
+        <button type="button" class="btn btn-primary">Search</button>
+      </div>
+      <div class="col-xs-1">
+        <button type="button" class="btn btn-primary ">Refresh</button>
+      </div>
     </div>
 
     <div class="sub-header">

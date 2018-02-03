@@ -5,11 +5,17 @@ import Itadmin from '@/components/fluid/itadmin/Itadmin'
 import Reports from '@/components/fluid/Reports'
 import Analytics from '@/components/fluid/Analytics'
 import Export from '@/components/fluid/Export'
+import Login from '@/components/Login'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/',
+      name: 'Login',
+      component: Login
+    },
     {
       path: '/Overview',
       name: 'Overview',
