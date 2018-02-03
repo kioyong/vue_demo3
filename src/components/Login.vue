@@ -12,7 +12,7 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit"  @click="signin('signin')">Sign in</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
   </div>
@@ -20,7 +20,11 @@
 
 <script>
 export default {
-
+  methods: {
+    signin () {
+      this.$router.push('Overview')
+    }
+  }
 }
 </script>
 
