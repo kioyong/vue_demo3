@@ -2,7 +2,7 @@
   <div>
     <h2 class="sub-header">{{title}}</h2>
     <div class="table-responsive">
-      <table class="table table-striped">
+      <table class="table table-striped table-sm">
         <thead>
           <tr>
             <th>#Id</th>
@@ -27,8 +27,15 @@
 </template>
 <script>
 // TODO 抽取成公共组件,使之能复用
+import {employees} from '@/mock/data/employeeList'
 export default {
   name: 'newjoiner',
-  props: ['title', 'employees']
+  // props: ['title', 'employees']
+  data () {
+    return {
+      employees: employees,
+      title: 'latest Employee records'
+    }
+  }
 }
 </script>

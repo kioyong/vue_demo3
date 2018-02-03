@@ -32,7 +32,7 @@
 </template>
 <script>
 export default {
-  name: 'itadmin',
+  name: 'Itadmin',
   data () {
     return {
       tableNames: [

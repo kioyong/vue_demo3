@@ -1,13 +1,15 @@
 <template>
-  <div class="col-sm-3 col-md-2 sidebar">
-    <ul class="nav nav-sidebar">
-      <li @click="goMenu(menu)" :class="{'active': menu.id === sidebarId}" v-for="(menu,index) in menus" :key="index">
-        <a >
-          {{menu.name}} <span class="sr-only">(current)</span>
-        </a>
-      </li>
-    </ul>
-  </div>
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li @click="goMenu(menu)" class="nav-item" v-for="(menu,index) in menus" :key="index">
+          <a :class="{'active': menu.id === sidebarId}" class="nav-link">
+            <span>{{menu.name}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </template>
 <script>
 export default {
@@ -43,7 +45,7 @@ export default {
   watch: {
     'sidebarName' (name) {
       console.log('trigger sidebarName changed!!' + name)
-      this.$router.push({name: name})
+      this.$router.push(name.toLowerCase())
     }
   },
   methods: {
@@ -53,7 +55,7 @@ export default {
     }
   },
   created () {
-    this.$router.push({ name: 'Overview', params: { name: this.menus[0].name } })
+    // this.$router.push({ name: 'Overview', params: { name: this.menus[0].name } })
   }
 }
 </script>

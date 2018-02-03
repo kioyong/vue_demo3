@@ -12,7 +12,7 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit"  @click="signin('signin')">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit"  @click="signin()">Sign in</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
   </div>
@@ -22,12 +22,12 @@
 export default {
   methods: {
     signin () {
-      this.$router.push('Overview')
+      this.$router.push('Management')
     }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+@import "../../static/css/signin.css";
 </style>
