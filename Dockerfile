@@ -1,12 +1,12 @@
 FROM node:9.11.1
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+ADD . /app/
 
-ONBUILD ARG NODE_ENV
-ONBUILD ENV NODE_ENV $NODE_ENV
-ONBUILD COPY package.json /usr/src/app/
-ONBUILD RUN npm install && npm cache clean --force
-ONBUILD COPY . /usr/src/app
+WORKDIR /app
+
+RUN npm install && npm cache clean --force
+
+ENV HOST 0.0.0.0
+ENV PORT 80
 
 CMD [ "npm", "start" ]
